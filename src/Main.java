@@ -9,7 +9,7 @@ public class Main {
      * printList() takes a linked list as arguments and print the content
      * addInOrder() takes linked list and string as arguments to add the string and order it
      * alphabetically respective of the order of adding the elements
-     *
+     * when a city is already added duplication is disallowed
      */
     public static void main(String[] args) {
         LinkedList<String> placesVisiting  = new LinkedList<>();
@@ -22,6 +22,9 @@ public class Main {
         addInOrder(placesVisiting, "Adelaide");
         addInOrder(placesVisiting, "Darwin");
 
+        printList(placesVisiting);
+
+        addInOrder(placesVisiting, "Darwin");
         printList(placesVisiting);
 
 
@@ -57,6 +60,7 @@ public class Main {
             int comparison  = stringListIterator.next().compareTo(newCity);
             if(comparison==0){
                 //equal, do not match
+                System.out.println( "-"+ newCity + " already added to list");
                 return false;
             }else if(comparison>0){
                 // newCity should appear before this code
