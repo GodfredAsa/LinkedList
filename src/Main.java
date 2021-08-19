@@ -6,19 +6,31 @@ public class Main {
 
     public static void main(String[] args) {
         LinkedList<String> placesVisiting  = new LinkedList<>();
-        placesVisiting.add("USA");
-        placesVisiting.add("Dubai");
-        placesVisiting.add("Germany");
-        placesVisiting.add("Mexico");
+
+        addInOrder(placesVisiting, "Sydney");
+        addInOrder(placesVisiting, "Melbourne");
+        addInOrder(placesVisiting, "Brisbane");
+        addInOrder(placesVisiting, "Perth");
+        addInOrder(placesVisiting, "Canberra");
+        addInOrder(placesVisiting, "Adelaide");
+        addInOrder(placesVisiting, "Darwin");
 
         printList(placesVisiting);
-        // inserting Canada at index of 1 and push the rest down of it
-        placesVisiting.add(1, "Canada");
-        printList(placesVisiting);
 
-        // removing an element
-        placesVisiting.remove(3);
-        printList(placesVisiting);
+
+//        placesVisiting.add("USA");
+//        placesVisiting.add("Dubai");
+//        placesVisiting.add("Germany");
+//        placesVisiting.add("Mexico");
+//
+//        printList(placesVisiting);
+//        // inserting Canada at index of 1 and push the rest down of it
+//        placesVisiting.add(1, "Canada");
+//        printList(placesVisiting);
+//
+//        // removing an element
+//        placesVisiting.remove(3);
+//        printList(placesVisiting);
     }
 
     private static void printList(LinkedList<String> myList){
@@ -50,7 +62,6 @@ public class Main {
             }
         }
         stringListIterator.add(newCity);
-        System.out.println("commit");
         return true;
     }
 }
