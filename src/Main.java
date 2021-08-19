@@ -27,6 +27,7 @@ public class Main {
 
         addInOrder(placesVisiting, "Darwin");
         printList(placesVisiting);
+        visit(placesVisiting);
 
 
 //        placesVisiting.add("USA");
@@ -117,5 +118,13 @@ public class Main {
                       break;
               }
           }
+    }
+    private static void printMenu(){
+        System.out.println("Available Actions\n"
+                 + "0 - Quit App\n"
+                 + "1 - Move to Next City\n"
+                 + "2 - Move to Previous City\n"
+                 + "3 - View Menu Options"
+        );
     }
 }
