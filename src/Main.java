@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -29,5 +30,26 @@ public class Main {
             System.out.println(counter + ". Visinting " + i.next());
         }
         System.out.println("***** end of vacation ***** ");
+    }
+
+    private static boolean addInOrder(LinkedList<String> linkedList, String newCity){
+        ListIterator<String> stringListIterator = linkedList.listIterator();
+        while(stringListIterator.hasNext()){
+            int comparison  = stringListIterator.next().compareTo(newCity);
+            if(comparison==0){
+                //equal, do not match
+                return false;
+            }else if(comparison>0){
+                // newCity should appear before this code
+                stringListIterator.previous(); //used previous the comparison moved to the next
+                // element hence we have to start at the beginning to check all.
+                stringListIterator.add(newCity);
+                return true;
+            }else if(comparison<0){
+                //move to next city
+            }
+        }
+        stringListIterator.add(newCity);
+        return true;
     }
 }
