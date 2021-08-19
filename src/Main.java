@@ -50,6 +50,7 @@ public class Main {
             }
         }
         stringListIterator.add(newCity);
+        System.out.println("commit");
         return true;
     }
 }
