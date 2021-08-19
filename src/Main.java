@@ -4,6 +4,13 @@ import java.util.ListIterator;
 
 public class Main {
 
+    /**
+     * Linked list concepts of adding and re-ordering of added elements alphabetically
+     * printList() takes a linked list as arguments and print the content
+     * addInOrder() takes linked list and string as arguments to add the string and order it
+     * alphabetically respective of the order of adding the elements
+     *
+     */
     public static void main(String[] args) {
         LinkedList<String> placesVisiting  = new LinkedList<>();
 
