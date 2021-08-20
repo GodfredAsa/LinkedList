@@ -1,5 +1,8 @@
 package SongPLayer;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Album {
     private String name;
     private String artist;
